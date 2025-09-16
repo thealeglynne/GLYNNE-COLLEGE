@@ -7,41 +7,41 @@ import '../../globals.css';
 const videos = [
   {
     slug: "cap1-hazla-pensar",
-    title: "Cap 1 — Hazla pensar",
+    title: "Módulo 1 — Introducción a la Regresión Lineal",
     duration: "26:11",
-    description: "Crea tu primer agente que razona y responde con inteligencia real.",
+    description: "Conceptos básicos, variables dependientes e independientes y cómo se relacionan.",
     date: "25 ago 2025",
     thumbnail: "https://i.pinimg.com/736x/69/a4/39/69a439c202f1ff1489ebc44bed92b8bb.jpg"
   },
   {
     slug: "cap2-personalidad-real",
-    title: "Cap 2 — Dale personalidad",
+    title: "Módulo 2 — Variables y Preparación de Datos",
     duration: "12:31",
-    description: "Tu agente con voz, carácter y estilo propio en cada interacción.",
+    description: "Limpieza de datos, transformación y análisis exploratorio para regresión.",
     date: "26 ago 2025",
     thumbnail:"https://i.pinimg.com/736x/9a/33/0c/9a330c976fb51ad658bce816e4161c3a.jpg"
   },
   {
     slug: "cap3-roles-multiples",
-    title: "Cap 3 — Roles múltiples",
+    title: "Módulo 3 — Construcción de Modelos Lineales",
     duration: "27:25",
-    description: "Auditor, desarrollador o vendedor: un agente que cambia de rol al instante.",
+    description: "Cómo definir ecuaciones, pesos y sesgos para modelar relaciones lineales.",
     date: "27 ago 2025",
     thumbnail: "https://i.pinimg.com/1200x/60/aa/68/60aa68be75138994d8b08648a54d302f.jpg"
   },
   {
     slug: "cap4-memoria-personalidad",
-    title: "Cap 4 — Memoria viva",
+    title: "Módulo 4 — Evaluación y Métricas de Modelos",
     duration: "34:11",
-    description: "Recuerda interacciones, adapta estilo y evoluciona con el usuario.",
+    description: "Errores, R², RMSE y cómo interpretar la precisión del modelo.",
     date: "29 ago 2025",
     thumbnail: "https://i.pinimg.com/736x/84/c3/7b/84c37b4930a5d85da304d8b39ca5b06d.jpg"
   },
   {
     slug: "cap5-nodos-dinamicos",
-    title: "Cap 5 — Nodos inteligentes",
+    title: "Módulo 5 — Optimización y Ajuste de Parámetros",
     duration: "54:24",
-    description: "Diseña nodos que comunican, aprenden y mantienen la memoria de tu agente.",
+    description: "Ajuste de coeficientes, regularización y mejora de la predicción.",
     date: "1 sept 2025",
     thumbnail: "https://i.pinimg.com/736x/bf/42/6e/bf426eef4550e9cc30ee7e154a988994.jpg"
   },
@@ -68,7 +68,6 @@ export default function VideoCardsSection3() {
         const capMatch = video.slug.match(/cap(\d+)(?:-(\d+))?/);
         const mainNum = capMatch ? capMatch[1] : null;
 
-        // 🔥 Aquí cambiamos capX -> RLX
         const href = capMatch
           ? `/RL${capMatch[1]}${capMatch[2] ? '-' + capMatch[2] : ''}`
           : `/videos/${video.slug}`;
@@ -109,7 +108,7 @@ export default function VideoCardsSection3() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">Capítulos</h2>
+      <h2 className="text-2xl font-bold mb-6">Capítulos de Regresión Lineal</h2>
       {renderVideos(capitulos, true)}
 
       {otros.length > 0 && (

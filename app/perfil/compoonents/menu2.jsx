@@ -7,33 +7,33 @@ import '../../globals.css'
 const videos = [
   {
     slug: "cap1-hazla-pensar",
-    title: "Cap 1 — Hazla pensar",
+    title: "Módulo 1 — Recolección y Preparación de Datos",
     duration: "26:11",
-    description: "Crea tu primer agente que razona y responde con inteligencia real.",
+    description: "Crea tu primer flujo de datos limpio y estructurado para análisis.",
     date: "25 ago 2025",
     thumbnail: "https://i.pinimg.com/736x/c4/05/70/c405709a0fe02efb81531a853e442cc8.jpg"
   },
   {
     slug: "cap2-personalidad-real",
-    title: "Cap 2 — Dale personalidad",
+    title: "Módulo 2 — Análisis Exploratorio y Visualización",
     duration: "12:31",
-    description: "Tu agente con voz, carácter y estilo propio en cada interacción.",
+    description: "Descubre patrones, relaciones y tendencias mediante gráficos y métricas.",
     date: "26 ago 2025",
     thumbnail:"https://i.pinimg.com/736x/6c/36/f6/6c36f66bfc5d3afe23cc31b45377b260.jpg"
   },
   {
     slug: "cap3-roles-multiples",
-    title: "Cap 3 — Roles múltiples",
+    title: "Módulo 3 — Modelos Predictivos y Machine Learning",
     duration: "27:25",
-    description: "Auditor, desarrollador o vendedor: un agente que cambia de rol al instante.",
+    description: "Construye modelos que predicen resultados y toman decisiones inteligentes.",
     date: "27 ago 2025",
     thumbnail: "https://i.pinimg.com/736x/81/da/3e/81da3e5146cd9b8abb2a9a48a5c2bf10.jpg"
   },
   {
     slug: "cap4-memoria-personalidad",
-    title: "Cap 4 — Memoria viva",
+    title: "Módulo 4 — Evaluación y Optimización de Modelos",
     duration: "34:11",
-    description: "Recuerda interacciones, adapta estilo y evoluciona con el usuario.",
+    description: "Mide desempeño, ajusta parámetros y asegura modelos confiables.",
     date: "29 ago 2025",
     thumbnail: "https://i.pinimg.com/736x/ff/4d/98/ff4d98254d95e58f520021c031d5bce6.jpg"
   },
@@ -121,7 +121,7 @@ export default function VideoCardsSection() {
 
       <div className="flex justify-center">
         <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-gray-900 text-center my-[80px] overflow-hidden">
-          <span className="relative z-10">No puede haber IA sin organizacion de datos</span>
+          <span className="relative z-10">No puede haber IA sin organización de datos</span>
           <span className="shine absolute inset-0"></span>
         </h2>
       </div>
@@ -130,4 +130,4 @@ export default function VideoCardsSection() {
       {renderVideos(capitulos, true)}
     </section>
   );
-}
+} 
