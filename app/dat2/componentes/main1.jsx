@@ -1,0 +1,54 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+export default function IntroModulo2() {
+  const [showLogo, setShowLogo] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowLogo(true), 1000);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return (
+    <main className="relative w-full h-screen overflow-hidden font-inter">
+      {/* Imagen de fondo */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: "url('https://i.pinimg.com/1200x/c2/bc/ec/c2bcecd927c3c66ff6a2427b16e5c2ad.jpg')" }}
+      />
+
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/70 z-10" />
+
+      {/* Contenido */}
+      <div className="absolute bottom-20 left-12 z-20 text-white max-w-4xl space-y-6">
+        <img
+          src="/logo.png"
+          alt="Logo GLYNNE"
+          className={`w-28 sm:w-36 transition-all duration-1000 ${
+            showLogo ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+          }`}
+        />
+
+        <h2 className="text-3xl sm:text-4xl font-extrabold leading-snug text-white">
+          Módulo 2 — Estadística y Exploración de Datos
+        </h2>
+
+        <p className="text-base sm:text-lg text-white font-semibold leading-relaxed">
+          En este módulo aprenderás a aplicar <span className="font-bold">estadísticas descriptivas</span> sobre tus datos con Python. 
+          Construirás <span className="font-bold">tablas de frecuencias</span> para entender distribuciones y calcularás el 
+          <span className="font-bold"> sesgo de los datos</span> para detectar patrones y anomalías.
+        </p>
+
+       
+
+        <button
+          className="mt-4 px-5 py-2 text-sm sm:text-base font-bold bg-white text-black rounded-lg transition hover:bg-gray-200"
+        >
+          Comenzar el módulo
+        </button>
+      </div>
+    </main>
+  );
+}
